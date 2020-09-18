@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <title>Position Practice</title>
+        <link rel="stylesheet" type="text/css" href="Project 1.css">
+    </head>
+    <body id="page">
+        <div class="game">
+            <h2>Play with me!<h2>
+            <h6>Click on the button and discover your color of the day!</h6>
+            <button id="button" type="button" class="btn btn-light btn-lg btn-block">Click me!</button>
+            <h5 id="meaning"></h5>
+        </div>
+
+        <script>
+            arr=[{color:"#FF0000",name: "red", text:"Red is for passion, Love, and Intensity. Something Exciting may be coming your way! "},{color:"#228B22",name:"Green", text:"Green is for Health,Abundance,and Nature. Make sure you spend some time in nature today! "},{color:"#FFD700",name:"Gold", text:"Gold is for success, power, and prestige. Smelling a raise soon! (Only if you work hard!) "},{color:"#E6E6FA",name:"Lavender",text:"Lavender is for calmness, gracefullness, and creativity. Paint someting today and light some candles!"},{color:"#FFA500",name:"Orange" ,text:"Orange is for optimism, warmth,and spontaneity. This is your reminder to not give up! Positive thinking goes a long way!"},{color:"#1E90FF",name:"blue",text:"Blue is for Control, goals, and awareness. Visualize your goals and dreams by writing them down in a notebook!"}]
+            
+            var page = document.getElementById("page")
+            var button = document.getElementById("button")
+            
+            button.addEventListener("click", function(e){
+                var i = Math.floor(Math.random() * arr.length)
+                page.style.background = arr[i].color 
+                button.innerHTML = arr[i].name
+                meaning.innerHTML = arr[i].text
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+.game{
+    margin-top: 35px;
+    margin-left: auto;
+    margin-bottom: 50%;
+    margin-right:  auto;
+    width: 600px;
+    height: 100px;
+    text-align: center;
+}
+#meaning{
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+}
